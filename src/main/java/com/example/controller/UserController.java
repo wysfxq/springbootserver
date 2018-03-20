@@ -92,5 +92,6 @@ public class UserController {
         ServletOutputStream sos = resp.getOutputStream();
         ImageIO.write((BufferedImage) map.get("buffImg"), "jpeg", sos);
         sos.close();
+
     }
 }
