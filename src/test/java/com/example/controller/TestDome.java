@@ -7,6 +7,7 @@ import com.example.entity.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -16,7 +17,7 @@ import java.util.regex.Pattern;
  * Created by yinsheng.wang on 2018/3/24.
  */
 public class TestDome extends BaseTest {
-    @Autowired
+    @Resource
     private IdGenerator idGenerator;
 
     @Test
