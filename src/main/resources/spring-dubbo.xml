@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:application name="wys_provider" owner="rcbg" organization="wwwrcbg"/>
+    <!-- zookeeper注册中心 -->
+    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
+    <!-- 服务协议. -->
+    <dubbo:protocol name="dubbo" port="20899"/>
+    <!-- <dubbo:protocol name="hessian" port="9096" />-->
+    <!-- 配置监控的服务地址和IP-->
+    <!--<dubbo:monitor address="127.0.0.1:7070"/>-->
+
+    <!-- 服务的缺省值配置 -->
+    <dubbo:provider group="impl" timeout="${dubbo.provider.timeout}" retries="0"
+                    connections="${dubbo.provider.connections}"/>
+
+    <!-- 通过注解发布服务 -->
+    <!-- <dubbo:annotation package="com.example.dubboservice" />-->
+
+    <!-- 默认客户端配置 -->
+    <dubbo:consumer check="false" group="impl"/>
+
+    <import resource="spring-dubbo-provider.xml"/>
+    <import resource="spring-dubbo-consumer.xml"/>
+</beans>

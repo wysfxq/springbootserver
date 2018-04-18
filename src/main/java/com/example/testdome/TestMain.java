@@ -2,13 +2,15 @@ package com.example.testdome;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import org.springframework.util.ObjectUtils;
+import org.springframework.util.StringUtils;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+import static com.example.testdome.PublicClass.aa;
 
 /**
  * Created by yinsheng.wang on 2018/3/29.
@@ -20,7 +22,9 @@ public class TestMain {
         //test3();
         //test4();
         //test5();
-        test6();
+        //test6();
+        //test7();
+        test8();
     }
 
     public static void test1() {
@@ -65,7 +69,7 @@ public class TestMain {
         TestThread testMain = new TestThread(10L);
         Thread thread = new Thread(testMain);
         thread.start();
-        PublicClass.aa = "fxq";
+        aa = "fxq";
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -126,5 +130,46 @@ public class TestMain {
         student.setName(null);
 
         System.out.println(JSON.toJSONString(student));
+    }
+
+    public static void test7() {
+        List<Student> studentList = new ArrayList<>();
+        Student student;
+        student = new Student();
+        student.setName("stu1");
+        student.setAge(20);
+        studentList.add(student);
+        student = new Student();
+        student.setName("stu2");
+        student.setAge(30);
+        studentList.add(student);
+        student = new Student();
+        student.setName("stu2");
+        student.setAge(40);
+        studentList.add(student);
+
+        studentList.forEach(student1 -> {
+            System.out.println(student1.getName());
+        });
+
+        List<Student> aa = studentList.stream().filter(student1 -> student1.getName().
+                equals("stu2")).collect(Collectors.toList());
+        Student bb = studentList.stream().filter(student1 -> student1.getName().equals("stu2")).findFirst().get();
+
+        System.out.println(JSON.toJSONString(aa));
+        System.out.println(JSON.toJSONString(bb));
+
+
+        List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
+        Collections.sort(names, (String a, String b) -> b.compareTo(a));
+        System.out.println(names);
+    }
+
+    public static void test8() {
+        Long aa = null;
+        Long bb = null;
+        ObjectUtils.isEmpty(aa);
+        String cc="a,b,c";
+        cc.split(",");
     }
 }

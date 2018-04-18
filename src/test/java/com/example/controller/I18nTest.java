@@ -14,15 +14,13 @@ public class I18nTest extends BaseTest {
 
     @Test
     public void test1() {
-        Long aa=null;
-        Long bb=111L;
-        if(bb.equals(aa)){
-            System.out.println("111");
-        }else {
-            System.out.println("222");
-        }
+        String value = messageUtil.getMessage("1001");
+        System.out.println(value);
+    }
 
-       /* String value = messageUtil.getMessage("1001");
-        System.out.println(value);*/
+    @Test
+    public void test2() {
+        String value = messageUtil.getMessage("1001", null, "", "en_US");
+        System.out.println(value);
     }
 }
