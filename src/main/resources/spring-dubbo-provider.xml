@@ -7,8 +7,8 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <bean id="demoService" class="com.example.dubboservice.impl.TestDubboServiceImpl"/>
+    <bean id="testDubboService" class="com.example.dubboservice.impl.TestDubboServiceImpl"/>
     <dubbo:service interface="com.example.dubboservice.TestDubboService" version="1.0.0.${dubbo.version.surfix}"
-                   ref="demoService" group="impl"/>
+                   ref="testDubboService" group="impl"/>
 
 </beans>
