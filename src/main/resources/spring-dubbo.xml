@@ -22,7 +22,7 @@
                     connections="${dubbo.provider.connections}"/>
 
     <!-- 通过注解发布服务 -->
-    <!-- <dubbo:annotation package="com.example.dubboservice" />-->
+    <dubbo:annotation package="com.example.dubboservice" />
 
     <!-- 默认客户端配置 -->
     <dubbo:consumer check="false" group="impl"/>

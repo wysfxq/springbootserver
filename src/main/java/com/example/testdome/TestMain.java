@@ -5,6 +5,7 @@ import com.alibaba.fastjson.TypeReference;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
+import java.lang.reflect.Field;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,7 +17,7 @@ import static com.example.testdome.PublicClass.aa;
  * Created by yinsheng.wang on 2018/3/29.
  */
 public class TestMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //test1();
         //test2();
         //test3();
@@ -24,7 +25,8 @@ public class TestMain {
         //test5();
         //test6();
         //test7();
-        test8();
+        //test8();
+        test9();
     }
 
     public static void test1() {
@@ -171,5 +173,10 @@ public class TestMain {
         ObjectUtils.isEmpty(aa);
         String cc="a,b,c";
         cc.split(",");
+    }
+    public static void test9() throws Exception {
+        Class<?> clz=Class.forName("com.example.entity.User");
+        Field[] fields = clz.getDeclaredFields();
+        System.out.println(fields);
     }
 }

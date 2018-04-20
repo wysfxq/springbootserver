@@ -1,6 +1,7 @@
 package com.example.dubboservice.impl;
 
 
+import com.alibaba.dubbo.rpc.RpcContext;
 import com.example.dubboservice.TestDubboService;
 import com.example.entity.User;
 import org.springframework.stereotype.Service;
@@ -23,12 +24,19 @@ public class TestDubboServiceImpl implements TestDubboService {
         user.setId(id);
         user.setName(name);
         user.setAge(age);
+        //获取dubbo rpc上下文
+        System.out.println(">>>>>>>>>>" + RpcContext.getContext().getAttachment("key"));
         return user;
     }
 
     @Override
     public User getUserByMap(Map<String, Object> mapParams) throws Exception {
         User user = new User();
+        try {
+            int i = 1 / 0;
+        } catch (Exception e) {
+            throw new Exception("stop", e);
+        }
         user.setId(Long.valueOf(mapParams.get("id").toString()));
         user.setName((String) mapParams.get("name"));
         user.setAge(Integer.valueOf(mapParams.get("age").toString()));

@@ -3,13 +3,13 @@ package com.example.controller;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.dubbo.rpc.RpcContext;
+import com.alibaba.dubbo.rpc.RpcException;
 import com.alibaba.dubbo.rpc.service.GenericService;
 import com.alibaba.fastjson.JSON;
-import com.example.entity.User;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -35,8 +35,6 @@ public class DubboReference extends BaseTest {
 
         // 用com.alibaba.dubboservice.rpc.service.GenericService可以替代所有接口引用
         genericService = reference.get();
-
-
     }
 
     @Test
@@ -59,43 +57,64 @@ public class DubboReference extends BaseTest {
         String[] paramsType = new String[]{"java.lang.Long", "java.lang.String", "java.lang.Integer"};
         Object[] paramsValue = new Object[]{1001330L, "wys", 30};
         // 基本类型以及Date,List,Map等不需要转换，直接调用
+        RpcContext.getContext().setAttachment("key", "rcp-------------------------------------");
         Object result = genericService.$invoke(methodName, paramsType, paramsValue);
         System.out.println(result);
     }
 
     @Test
-    public void test3() {
+    public void test3() throws Exception {
         init();
         //方法名,参数类型可以从数据库中取
         String methodName = "getUserByMap";
         String[] paramsType = new String[]{"java.util.Map"};
         String jsonParam = "{\n" +
                 "\t\"id\": \"3333\",\n" +
-                "\t\"name\": \"tttt\",\n" +
+                "\t\"name\": \"我\",\n" +
                 "\t\"age\": \"20\"\n" +
                 "}";
         Map<String, Object> mapParam = JSON.parseObject(jsonParam);
         Object[] paramsValue = new Object[]{mapParam};
         // 基本类型以及Date,List,Map等不需要转换，直接调用
-        Object result = genericService.$invoke(methodName, paramsType, paramsValue);
+        Object result;
+        try {
+            result = genericService.$invoke(methodName, paramsType, paramsValue);
+        } catch (RpcException e) {
+            throw new RpcException(e.getCode(), e.getMessage(), e);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage(), e);
+        }
         System.out.println(result);
     }
 
     @Test
-    public void test4() throws ClassNotFoundException {
+    public void test4() throws Exception {
         init();
         //方法名,参数类型可以从数据库中取
         String methodName = "getUserByObject";
         String[] paramsType = new String[]{"com.example.entity.User"};
         String jsonParam = "{\n" +
-                "\t\"id\": \"7777\",\n" +
-                "\t\"name\": \"ddddd\",\n" +
-                "\t\"age\": \"25\"\n" +
+                "\t\"id\": \"222\",\n" +
+                "\t\"age\": \"20\"\n" +
                 "}";
         Map<String, Object> mapParam = JSON.parseObject(jsonParam);
         Object[] paramsValue = new Object[]{mapParam};
         // 基本类型以及Date,List,Map等不需要转换，直接调用
-        Object result = genericService.$invoke(methodName, paramsType, paramsValue);
+        Object result;
+        try {
+            result = genericService.$invoke(methodName, paramsType, paramsValue);
+            if (result instanceof String) {
+                System.out.println("String");
+            } else if (result instanceof Collection) {
+                System.out.println("Collection");
+            } else if (result instanceof Map) {
+                System.out.println("Map");
+            }
+        } catch (RpcException e) {
+            throw new RpcException(e.getCode(), e.getMessage(), e);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage(), e);
+        }
         System.out.println(result);
     }
 }
