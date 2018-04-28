@@ -13,7 +13,7 @@ public class ThreadPoolTest {
        /* test1();
         test2();*/
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 50; i++) {
             ThreadExccute.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
@@ -26,7 +26,7 @@ public class ThreadPoolTest {
                 }
             });
         }
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 50; i++) {
             ThreadExccute.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {

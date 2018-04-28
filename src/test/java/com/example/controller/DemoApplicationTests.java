@@ -5,6 +5,8 @@ import com.example.service.UserService;
 import org.junit.Test;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class DemoApplicationTests extends BaseTest {
@@ -14,7 +16,6 @@ public class DemoApplicationTests extends BaseTest {
     @Test
     public void query() throws Exception {
         System.out.println(userService.query());
-        System.out.println("aaa");
     }
 
     @Test
@@ -29,11 +30,17 @@ public class DemoApplicationTests extends BaseTest {
 
     @Test
     public void delUser() throws Exception {
-        userService.delUser(558929044L);
+        userService.delUser(null);
     }
 
     @Test
     public void userProce() throws Exception {
         userService.userProce();
+    }
+
+    @Test
+    public void queryForMap() throws Exception {
+        List<Map<String, Object>> mapList=userService.queryForMap();
+        System.out.println(mapList);
     }
 }

@@ -42,4 +42,8 @@ public class TestDome extends BaseTest {
         user.setAge(Integer.valueOf(map.get("age")));
         System.out.println(user);
     }
+    @Test
+    public void test3() {
+
+    }
 }

@@ -2,6 +2,9 @@ package com.example.testdome;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.example.entity.User;
+import org.springframework.expression.Operation;
+import org.springframework.expression.spel.ast.Operator;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
@@ -26,7 +29,8 @@ public class TestMain {
         //test6();
         //test7();
         //test8();
-        test9();
+        //test9();
+        test10();
     }
 
     public static void test1() {
@@ -171,12 +175,25 @@ public class TestMain {
         Long aa = null;
         Long bb = null;
         ObjectUtils.isEmpty(aa);
-        String cc="a,b,c";
+        String cc = "a,b,c";
         cc.split(",");
     }
+
     public static void test9() throws Exception {
-        Class<?> clz=Class.forName("com.example.entity.User");
+        Class<?> clz = Class.forName("com.example.entity.User");
         Field[] fields = clz.getDeclaredFields();
         System.out.println(fields);
+    }
+
+    public static void test10() throws Exception {
+        /*Map<String, Object> map = new HashMap<>();
+        map.put("id", 1001);
+        System.out.println(map.get("name"));
+        */
+        User user = new User();
+        user.setId(1001L);
+        Optional.ofNullable(user).orElseThrow(() -> new Exception("ttttt"));
+        Optional.ofNullable(user).ofNullable(user.getName()).orElseThrow(() -> new Exception("fffff"));
+        Optional.ofNullable(user).map(User::getName).orElseThrow(() -> new Exception("aaaa"));
     }
 }
