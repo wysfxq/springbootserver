@@ -1,5 +1,6 @@
 package com.example.service.impl;
 
+import com.example.annotation.CheckParam;
 import com.example.annotation.Examine;
 import com.example.annotation.NotNull;
 import com.example.entity.User;
@@ -34,7 +35,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int addUser(User user) throws Exception {
+    @Examine(value = "fffff")
+    public int addUser(@CheckParam User user) throws Exception {
         String sql = "insert into user(id,name,age)values('" + user.getId() + "','" + user.getName() + "','" + user.getAge() + "')";
         return jdbcTemplate.update(sql);
     }

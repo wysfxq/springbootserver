@@ -23,7 +23,7 @@ public class DemoApplicationTests extends BaseTest {
         Long id = Math.abs(Long.valueOf(UUID.randomUUID().hashCode()));
         User user = new User();
         user.setId(id);
-        user.setName("test");
+        //user.setName("test");
         user.setAge(19);
         userService.addUser(user);
     }

@@ -1,7 +1,9 @@
 package com.example.aop;
 
+import com.example.annotation.CheckParam;
 import com.example.annotation.Examine;
 import com.example.annotation.NotNull;
+import com.example.entity.User;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -10,6 +12,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
@@ -58,6 +61,14 @@ public class SpringAopAnnotation {
             for (int j = 0; j < annotations.length; j++) {
                 if (annotations[j].annotationType().equals(NotNull.class) && args[i] == null) {
                     System.out.println("参数为空");
+                } else if (annotations[j].annotationType().equals(CheckParam.class)) {
+                    Field[] fields = User.class.getDeclaredFields();
+                    for (Field f : fields) {
+                        NotNull notNull = f.getAnnotation(NotNull.class);
+                        if (notNull != null) {
+                            System.out.println("参数为空");
+                        }
+                    }
                 }
             }
         }

@@ -1,13 +1,18 @@
 package com.example.entity;
 
+import com.example.annotation.NotNull;
+
 import java.io.Serializable;
 
 /**
  * Created by yinsheng.wang on 2018/1/10.
  */
 public class User implements Serializable {
+    @NotNull
     private Long id;
+    @NotNull
     private String name;
+    @NotNull
     private int age;
 
     public Long getId() {
