@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.dangdang.ddframe.rdb.sharding.id.generator.IdGenerator;
 import com.example.entity.User;
 import org.junit.Test;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
@@ -42,8 +43,17 @@ public class TestDome extends BaseTest {
         user.setAge(Integer.valueOf(map.get("age")));
         System.out.println(user);
     }
+
     @Test
     public void test3() {
-
+        User user = new User();
+        user.setId(1001L);
+        user.setName("user1");
+        user.setAge(25);
+        User u2 = new User();
+        BeanUtils.copyProperties(user, u2);
+        System.out.println(u2.getId() + "-----" + u2.getName() + "----" + u2.getAge());
+        System.out.println(user.hashCode());
+        System.out.println(u2.hashCode());
     }
 }

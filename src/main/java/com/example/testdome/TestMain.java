@@ -30,7 +30,8 @@ public class TestMain {
         //test7();
         //test8();
         //test9();
-        test10();
+        //test10();
+        test11();
     }
 
     public static void test1() {
@@ -193,7 +194,27 @@ public class TestMain {
         User user = new User();
         user.setId(1001L);
         Optional.ofNullable(user).orElseThrow(() -> new Exception("ttttt"));
-        Optional.ofNullable(user).ofNullable(user.getName()).orElseThrow(() -> new Exception("fffff"));
-        Optional.ofNullable(user).map(User::getName).orElseThrow(() -> new Exception("aaaa"));
+        //Optional.ofNullable(user).ofNullable(user.getName()).orElseThrow(() -> new Exception("fffff"));
+        //Optional.ofNullable(user).map(User::getName).orElseThrow(() -> new Exception("aaaa"));
+
+        User u2 = null;
+        Optional.ofNullable(u2).map(User::getName).orElseThrow(() -> new Exception("aaaa"));
+    }
+
+    public static void test11() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("ukid", 123456789L);
+        Student student = new Student();
+        student.setName("test1");
+        student.setAge(20);
+        student.setDate(new Date());
+        map.put("student", student);
+
+        Long ukid = getMap(map, "ukid", Long.class);
+        System.out.println(ukid);
+    }
+
+    public static <K> K getMap(Map<String, Object> map, String key, Class<K> Cls) {
+        return Cls.cast(map.get(key));
     }
 }
