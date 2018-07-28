@@ -7,8 +7,8 @@ import java.util.concurrent.Executors;
  * Created by yinsheng.wang on 2018/4/24.
  */
 public class ThreadExccute {
-    //public static ExecutorService instance =  Executors.newFixedThreadPool(5);
-   private static ExecutorService instance = null;
+    private static ExecutorService instance = null;
+    private static int poolNum = 10;
 
     private ThreadExccute() {
     }
@@ -17,7 +17,7 @@ public class ThreadExccute {
         if (instance == null) {
             synchronized (ExecutorService.class) {
                 if (instance == null) {
-                    instance = Executors.newFixedThreadPool(5);
+                    instance = Executors.newFixedThreadPool(poolNum);
                 }
             }
         }

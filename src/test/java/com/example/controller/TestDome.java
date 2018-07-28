@@ -56,4 +56,13 @@ public class TestDome extends BaseTest {
         System.out.println(user.hashCode());
         System.out.println(u2.hashCode());
     }
+
+    @Test
+    public void test4() throws Exception {
+        Class clazz = Class.forName("java.lang.String");
+        String str = "aaa";
+        if (clazz.isInstance(str)) {
+            System.out.println("string");
+        }
+    }
 }

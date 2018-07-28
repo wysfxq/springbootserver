@@ -26,7 +26,7 @@ public class ThreadPoolTest {
                 }
             });
         }
-        for (int i = 0; i < 50; i++) {
+     /*   for (int i = 0; i < 50; i++) {
             ThreadExccute.getInstance().execute(new Runnable() {
                 @Override
                 public void run() {
@@ -38,7 +38,7 @@ public class ThreadPoolTest {
                     }
                 }
             });
-        }
+        }*/
 
     }
 

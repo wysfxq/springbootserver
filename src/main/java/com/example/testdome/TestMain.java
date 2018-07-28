@@ -31,7 +31,8 @@ public class TestMain {
         //test8();
         //test9();
         //test10();
-        test11();
+        //test12();
+        test13();
     }
 
     public static void test1() {
@@ -158,7 +159,8 @@ public class TestMain {
         studentList.forEach(student1 -> {
             System.out.println(student1.getName());
         });
-
+        studentList.stream().forEach(stu -> System.out.println(stu.getName()));
+        System.out.println("--------------");
         List<Student> aa = studentList.stream().filter(student1 -> student1.getName().
                 equals("stu2")).collect(Collectors.toList());
         Student bb = studentList.stream().filter(student1 -> student1.getName().equals("stu2")).findFirst().get();
@@ -212,6 +214,34 @@ public class TestMain {
 
         Long ukid = getMap(map, "ukid", Long.class);
         System.out.println(ukid);
+    }
+
+    public static void test12() {
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
+
+        List<String> filtered = strings.stream().filter(str -> !str.isEmpty()).collect(Collectors.toList());
+        System.out.println(filtered);
+
+        long count = strings.stream().filter(str -> str.isEmpty()).count();
+        System.out.println(count);
+
+    }
+
+    public static void test13() {
+        List<Map<String, Object>> mapList = new ArrayList<>();
+        Map<String, Object> objectMap = new HashMap<>();
+        objectMap.put("interfaceName", "com.wys.sercive.HellowService");
+        objectMap.put("methodName", "sayHellow");
+        objectMap.put("grateWayName", "hellowService.sayHellow");
+
+        List<Map<String, Object>> paramsMapList = new ArrayList<>();
+        Map<String, Object> paramsMap = new HashMap<>();
+        paramsMap.put("paramName", "id");
+        paramsMap.put("paramType", "java.lang.String");
+        paramsMapList.add(paramsMap);
+
+        objectMap.put("param", paramsMapList);
+        mapList.add(objectMap);
     }
 
     public static <K> K getMap(Map<String, Object> map, String key, Class<K> Cls) {

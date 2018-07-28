@@ -1,0 +1,144 @@
+2018-07-23 09:33:25.128  INFO 37452 --- [main] com.example.controller.TestDome          : Starting TestDome on BI-WANGYS with PID 37452 (started by yinsheng.wang in D:\Java\springboot\springbootserver)
+2018-07-23 09:33:25.129 DEBUG 37452 --- [main] com.example.controller.TestDome          : Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2018-07-23 09:33:25.129  INFO 37452 --- [main] com.example.controller.TestDome          : The following profiles are active: pro
+2018-07-23 09:33:25.852  INFO 37452 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@48f278eb: startup date [Mon Jul 23 09:33:25 CST 2018]; root of context hierarchy
+2018-07-23 09:33:27.635  INFO 37452 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring-dubbo.xml]
+2018-07-23 09:33:28.010  INFO 37452 --- [main] c.a.dubbo.common.logger.LoggerFactory    : using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-07-23 09:33:28.050  INFO 37452 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring-dubbo-provider.xml]
+2018-07-23 09:33:28.094  INFO 37452 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [spring-dubbo-consumer.xml]
+2018-07-23 09:33:28.413  INFO 37452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-23 09:33:28.482  INFO 37452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-07-23 09:33:31.186  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@48f278eb: startup date [Mon Jul 23 09:33:25 CST 2018]; root of context hierarchy
+2018-07-23 09:33:31.302  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.example.controller.DeomController.index()
+2018-07-23 09:33:31.303  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getMessage]}" onto public java.lang.String com.example.controller.DeomController.getMessage()
+2018-07-23 09:33:31.304  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[POST]}" onto public java.lang.String com.example.controller.FileUploadController.upload(org.springframework.web.multipart.MultipartFile)
+2018-07-23 09:33:31.305  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload],methods=[GET]}" onto public java.lang.String com.example.controller.FileUploadController.upload()
+2018-07-23 09:33:31.305  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload/batch],methods=[POST]}" onto public java.lang.String com.example.controller.FileUploadController.batchUpload(javax.servlet.http.HttpServletRequest)
+2018-07-23 09:33:31.305  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/upload/batch],methods=[GET]}" onto public java.lang.String com.example.controller.FileUploadController.batchUpload()
+2018-07-23 09:33:31.308  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getProperties]}" onto public java.util.Map<java.lang.String, java.lang.String> com.example.controller.UserController.getProperties() throws java.lang.Exception
+2018-07-23 09:33:31.308  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/query]}" onto public java.util.List<com.example.entity.User> com.example.controller.UserController.query() throws java.lang.Exception
+2018-07-23 09:33:31.308  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getCode]}" onto public void com.example.controller.UserController.getCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-07-23 09:33:31.308  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getServerPort]}" onto public java.lang.String com.example.controller.UserController.getServerPort() throws java.lang.Exception
+2018-07-23 09:33:31.310  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delUser]}" onto public void com.example.controller.UserController.delUser(java.lang.Long) throws java.lang.Exception
+2018-07-23 09:33:31.310  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/addUser]}" onto public void com.example.controller.UserController.addUser(java.lang.String,java.lang.Integer) throws java.lang.Exception
+2018-07-23 09:33:31.312  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-07-23 09:33:31.312  INFO 37452 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-07-23 09:33:31.356  INFO 37452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-23 09:33:31.356  INFO 37452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-23 09:33:31.403  INFO 37452 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-07-23 09:33:32.721  INFO 37452 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-07-23 09:33:33.325  INFO 37452 --- [main] com.alibaba.dubbo.config.AbstractConfig  :  [DUBBO] The service ready on spring started. service: com.example.dubboservice.TestDubboService, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-07-23 09:33:33.431  INFO 37452 --- [main] com.alibaba.dubbo.config.AbstractConfig  :  [DUBBO] Export dubbo service com.example.dubboservice.TestDubboService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-07-23 09:33:33.431  INFO 37452 --- [main] com.alibaba.dubbo.config.AbstractConfig  :  [DUBBO] Export dubbo service com.example.dubboservice.TestDubboService to url dubbo://192.168.72.167:20899/com.example.dubboservice.TestDubboService?anyhost=true&application=wys_provider&default.connections=100&default.group=impl&default.retries=0&default.timeout=60000&dubbo=2.5.3&group=impl&interface=com.example.dubboservice.TestDubboService&methods=getUserByObject,getName,getUser,getUserByMap&organization=wwwrcbg&owner=rcbg&pid=37452&revision=1.0.0.cit&side=provider&timestamp=1532309613356&version=1.0.0.cit, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-07-23 09:33:33.432  INFO 37452 --- [main] com.alibaba.dubbo.config.AbstractConfig  :  [DUBBO] Register dubbo service com.example.dubboservice.TestDubboService url dubbo://192.168.72.167:20899/com.example.dubboservice.TestDubboService?anyhost=true&application=wys_provider&default.connections=100&default.group=impl&default.retries=0&default.timeout=60000&dubbo=2.5.3&group=impl&interface=com.example.dubboservice.TestDubboService&methods=getUserByObject,getName,getUser,getUserByMap&organization=wwwrcbg&owner=rcbg&pid=37452&revision=1.0.0.cit&side=provider&timestamp=1532309613356&version=1.0.0.cit to registry registry://localhost:2181/com.alibaba.dubbo.registry.RegistryService?application=wys_provider&dubbo=2.5.3&organization=wwwrcbg&owner=rcbg&pid=37452&registry=zookeeper&timestamp=1532309613342, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-07-23 09:33:33.678  INFO 37452 --- [main] c.a.d.remoting.transport.AbstractServer  :  [DUBBO] Start NettyServer bind /0.0.0.0:20899, export /192.168.72.167:20899, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-07-23 09:33:33.715  INFO 37452 --- [ZkClient-EventThread-22-localhost:2181] org.I0Itec.zkclient.ZkEventThread        : Starting ZkClient event thread.
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=BI-WANGYS.hq.wwwarehouse.com
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_131
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=D:\jdk1.8.0_131\jre
+2018-07-23 09:33:33.730  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\IntelliJ IDEA 2016.1.1\lib\idea_rt.jar;D:\IntelliJ IDEA 2016.1.1\plugins\junit\lib\junit-rt.jar;D:\jdk1.8.0_131\jre\lib\charsets.jar;D:\jdk1.8.0_131\jre\lib\deploy.jar;D:\jdk1.8.0_131\jre\lib\ext\access-bridge-64.jar;D:\jdk1.8.0_131\jre\lib\ext\cldrdata.jar;D:\jdk1.8.0_131\jre\lib\ext\dnsns.jar;D:\jdk1.8.0_131\jre\lib\ext\jaccess.jar;D:\jdk1.8.0_131\jre\lib\ext\jfxrt.jar;D:\jdk1.8.0_131\jre\lib\ext\localedata.jar;D:\jdk1.8.0_131\jre\lib\ext\nashorn.jar;D:\jdk1.8.0_131\jre\lib\ext\sunec.jar;D:\jdk1.8.0_131\jre\lib\ext\sunjce_provider.jar;D:\jdk1.8.0_131\jre\lib\ext\sunmscapi.jar;D:\jdk1.8.0_131\jre\lib\ext\sunpkcs11.jar;D:\jdk1.8.0_131\jre\lib\ext\zipfs.jar;D:\jdk1.8.0_131\jre\lib\javaws.jar;D:\jdk1.8.0_131\jre\lib\jce.jar;D:\jdk1.8.0_131\jre\lib\jfr.jar;D:\jdk1.8.0_131\jre\lib\jfxswt.jar;D:\jdk1.8.0_131\jre\lib\jsse.jar;D:\jdk1.8.0_131\jre\lib\management-agent.jar;D:\jdk1.8.0_131\jre\lib\plugin.jar;D:\jdk1.8.0_131\jre\lib\resources.jar;D:\jdk1.8.0_131\jre\lib\rt.jar;D:\Java\springboot\springbootserver\target\test-classes;D:\Java\springboot\springbootserver\target\classes;D:\resp\org\springframework\boot\spring-boot-starter-web\1.5.9.RELEASE\spring-boot-starter-web-1.5.9.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-starter\1.5.9.RELEASE\spring-boot-starter-1.5.9.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot\1.5.9.RELEASE\spring-boot-1.5.9.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-autoconfigure\1.5.9.RELEASE\spring-boot-autoconfigure-1.5.9.RELEASE.jar;D:\resp\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;D:\resp\org\springframework\boot\spring-boot-starter-tomcat\1.5.9.RELEASE\spring-boot-starter-tomcat-1.5.9.RELEASE.jar;D:\resp\org\apache\tomcat\embed\tomcat-embed-core\8.5.23\tomcat-embed-core-8.5.23.jar;D:\resp\org\apache\tomcat\tomcat-annotations-api\8.5.23\tomcat-annotations-api-8.5.23.jar;D:\resp\org\apache\tomcat\embed\tomcat-embed-el\8.5.23\tomcat-embed-el-8.5.23.jar;D:\resp\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.23\tomcat-embed-websocket-8.5.23.jar;D:\resp\org\hibernate\hibernate-validator\5.3.6.Final\hibernate-validator-5.3.6.Final.jar;D:\resp\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;D:\resp\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;D:\resp\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;D:\resp\com\fasterxml\jackson\core\jackson-databind\2.8.10\jackson-databind-2.8.10.jar;D:\resp\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;D:\resp\com\fasterxml\jackson\core\jackson-core\2.8.10\jackson-core-2.8.10.jar;D:\resp\org\springframework\spring-web\4.3.13.RELEASE\spring-web-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-beans\4.3.13.RELEASE\spring-beans-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-context\4.3.13.RELEASE\spring-context-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-webmvc\4.3.13.RELEASE\spring-webmvc-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-expression\4.3.13.RELEASE\spring-expression-4.3.13.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-starter-aop\1.5.9.RELEASE\spring-boot-starter-aop-1.5.9.RELEASE.jar;D:\resp\org\springframework\spring-aop\4.3.13.RELEASE\spring-aop-4.3.13.RELEASE.jar;D:\resp\org\aspectj\aspectjweaver\1.8.13\aspectjweaver-1.8.13.jar;D:\resp\org\springframework\boot\spring-boot-starter-test\1.5.9.RELEASE\spring-boot-starter-test-1.5.9.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-test\1.5.9.RELEASE\spring-boot-test-1.5.9.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-test-autoconfigure\1.5.9.RELEASE\spring-boot-test-autoconfigure-1.5.9.RELEASE.jar;D:\resp\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;D:\resp\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;D:\resp\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;D:\resp\junit\junit\4.12\junit-4.12.jar;D:\resp\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;D:\resp\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;D:\resp\org\objenesis\objenesis\2.1\objenesis-2.1.jar;D:\resp\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\resp\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;D:\resp\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;D:\resp\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\resp\org\springframework\spring-core\4.3.13.RELEASE\spring-core-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-test\4.3.13.RELEASE\spring-test-4.3.13.RELEASE.jar;D:\resp\mysql\mysql-connector-java\5.1.39\mysql-connector-java-5.1.39.jar;D:\resp\org\springframework\boot\spring-boot-starter-thymeleaf\1.4.0.RELEASE\spring-boot-starter-thymeleaf-1.4.0.RELEASE.jar;D:\resp\org\thymeleaf\thymeleaf-spring4\2.1.6.RELEASE\thymeleaf-spring4-2.1.6.RELEASE.jar;D:\resp\org\thymeleaf\thymeleaf\2.1.6.RELEASE\thymeleaf-2.1.6.RELEASE.jar;D:\resp\ognl\ognl\3.0.8\ognl-3.0.8.jar;D:\resp\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;D:\resp\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;D:\resp\org\codehaus\groovy\groovy\2.4.13\groovy-2.4.13.jar;D:\resp\org\springframework\boot\spring-boot-starter-logging\1.5.9.RELEASE\spring-boot-starter-logging-1.5.9.RELEASE.jar;D:\resp\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;D:\resp\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;D:\resp\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;D:\resp\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;D:\resp\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;D:\resp\org\springframework\boot\spring-boot-starter-jdbc\1.5.9.RELEASE\spring-boot-starter-jdbc-1.5.9.RELEASE.jar;D:\resp\org\apache\tomcat\tomcat-jdbc\8.5.23\tomcat-jdbc-8.5.23.jar;D:\resp\org\apache\tomcat\tomcat-juli\8.5.23\tomcat-juli-8.5.23.jar;D:\resp\org\springframework\spring-jdbc\4.3.13.RELEASE\spring-jdbc-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-tx\4.3.13.RELEASE\spring-tx-4.3.13.RELEASE.jar;D:\resp\org\springframework\boot\spring-boot-starter-data-redis\1.5.2.RELEASE\spring-boot-starter-data-redis-1.5.2.RELEASE.jar;D:\resp\org\springframework\data\spring-data-redis\1.8.9.RELEASE\spring-data-redis-1.8.9.RELEASE.jar;D:\resp\org\springframework\data\spring-data-keyvalue\1.2.9.RELEASE\spring-data-keyvalue-1.2.9.RELEASE.jar;D:\resp\org\springframework\spring-oxm\4.3.13.RELEASE\spring-oxm-4.3.13.RELEASE.jar;D:\resp\org\springframework\spring-context-support\4.3.13.RELEASE\spring-context-support-4.3.13.RELEASE.jar;D:\resp\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;D:\resp\org\apache\commons\commons-pool2\2.4.3\commons-pool2-2.4.3.jar;D:\resp\org\springframework\boot\spring-boot-starter-data-mongodb\1.5.9.RELEASE\spring-boot-starter-data-mongodb-1.5.9.RELEASE.jar;D:\resp\org\mongodb\mongodb-driver\3.4.3\mongodb-driver-3.4.3.jar;D:\resp\org\mongodb\mongodb-driver-core\3.4.3\mongodb-driver-core-3.4.3.jar;D:\resp\org\mongodb\bson\3.4.3\bson-3.4.3.jar;D:\resp\org\springframework\data\spring-data-mongodb\1.10.9.RELEASE\spring-data-mongodb-1.10.9.RELEASE.jar;D:\resp\org\springframework\data\spring-data-commons\1.13.9.RELEASE\spring-data-commons-1.13.9.RELEASE.jar;D:\resp\com\alibaba\fastjson\1.2.12\fastjson-1.2.12.jar;D:\resp\commons-net\commons-net\3.4\commons-net-3.4.jar;D:\resp\javax\mail\javax.mail-api\1.5.3\javax.mail-api-1.5.3.jar;D:\resp\javax\activation\activation\1.1\activation-1.1.jar;D:\resp\com\sun\mail\javax.mail\1.5.3\javax.mail-1.5.3.jar;D:\resp\com\dangdang\sharding-jdbc-self-id-generator\1.4.1\sharding-jdbc-self-id-generator-1.4.1.jar;D:\resp\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;D:\resp\com\dangdang\sharding-jdbc-core\1.4.1\sharding-jdbc-core-1.4.1.jar;D:\resp\org\projectlombok\lombok\1.16.18\lombok-1.16.18.jar;D:\resp\com\google\guava\guava\18.0\guava-18.0.jar;D:\resp\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;D:\resp\com\alibaba\druid\1.0.12\druid-1.0.12.jar;D:\jdk1.8.0_131\jre\..\lib\jconsole.jar;D:\jdk1.8.0_131\jre\..\lib\tools.jar;D:\resp\cglib\cglib\3.1\cglib-3.1.jar;D:\resp\org\ow2\asm\asm\4.2\asm-4.2.jar;D:\resp\io\dropwizard\metrics\metrics-core\3.1.5\metrics-core-3.1.5.jar;D:\resp\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;D:\resp\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;D:\resp\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;D:\resp\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\resp\org\slf4j\slf4j-log4j12\1.7.25\slf4j-log4j12-1.7.25.jar;D:\resp\log4j\log4j\1.2.16\log4j-1.2.16.jar;D:\resp\jline\jline\0.9.94\jline-0.9.94.jar;D:\resp\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;D:\resp\com\github\sgroschupf\zkclient\0.1\zkclient-0.1.jar
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=D:\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\jdk1.8.0_131\bin;D:\jdk1.8.0_131\jre\bin;D:\Git\cmd;D:\JavaDevelop\apache-maven-3.3.9\bin;C:\WINDOWS\System32\OpenSSH\;C:\Users\yinsheng.wang\AppData\Local\Microsoft\WindowsApps;;.
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\YINSHE~1.WAN\AppData\Local\Temp\
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 10
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=yinsheng.wang
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\yinsheng.wang
+2018-07-23 09:33:33.734  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\Java\springboot\springbootserver
+2018-07-23 09:33:33.735  INFO 37452 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=localhost:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@32a8ca06
+2018-07-23 09:33:33.778  INFO 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:33.811  INFO 37452 --- [cluster-ClusterId{value='5b55306cea64e3924c2ed7f3', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:113)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:57)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+
+2018-07-23 09:33:34.794  WARN 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:34.897  INFO 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:35.900  WARN 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:37.000  INFO 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:38.004  WARN 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:38.104  INFO 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:39.106  WARN 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:40.207  INFO 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:41.210  WARN 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:41.310  INFO 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:42.313  WARN 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:43.413  INFO 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:44.416  WARN 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:44.516  INFO 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-07-23 09:33:45.520  WARN 37452 --- [main-SendThread(0:0:0:0:0:0:0:1:2181)] org.apache.zookeeper.ClientCnxn          : Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+
+2018-07-23 09:33:46.621  INFO 37452 --- [main-SendThread(127.0.0.1:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
